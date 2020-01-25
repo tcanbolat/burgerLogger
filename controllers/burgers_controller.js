@@ -1,5 +1,5 @@
 var express = require("express");
-
+const burger = require("../models/burger");
 var router = express.Router();
 
 
@@ -18,3 +18,5 @@ router.put("", function(req, res) {
 
 // Export routes for server.js to use.
 module.exports = router;
+
+
