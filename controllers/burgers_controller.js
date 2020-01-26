@@ -1,5 +1,5 @@
 var express = require("express");
-const burger = require("../models/burger");
+var burger = require("../models/burger");
 var router = express.Router();
 
 // Create all our routes and set up logic within those routes where required.
