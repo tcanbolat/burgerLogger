@@ -1,0 +1,15 @@
+body {
+    background-color: aqua;
+}
+
+.card {
+    border: none;
+}
+
+p {
+    border: 1px solid #693d3d;
+    background-color: #693d3d;
+    color: whitesmoke;
+    border-radius: 50em;
+}
+

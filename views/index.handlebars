@@ -1,34 +1,61 @@
-<h1>Eat-Da-Burger</h1>
-
-<h2>burgers ready to devour</h2>
-
-
-<ul>
-    {{#each burgers}}
-    {{#unless DEVOURED}}
-    {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>devoured</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#if DEVOURED}}
-    {{> burgers/burger-block devoured=false}}
-    {{/if}}
-    {{/each}}
-</ul>
+<div class="container">
+    <h1 class="text-center mb-5 mt-5">Eat-Da-Burger</h1>
+    <div class="row ">
 
 
+        <div class="col">
 
-<form class="create-Burger">
 
-    <div class="form-group">
-        <label for="burg">New Burger:</label>
-        <input type="text" id="burg" name="name">
+            <div class="card mb-3 bg-transparent mx-auto text-center">
+                <h4 class="text-center">ready to devour</h4>
+
+                <img src="/assets/burgerBunTop.png" class="card-img-top" alt=".burgerbuntop">
+                <div class="card-body">
+                    <span>
+                        {{#each burgers}}
+                        {{#unless DEVOURED}}
+                        {{> burgers/burger-block devoured=true}}
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+                    <img src="/assets/burgerBunBottom.png" class="card-img-top" alt="burgerbunbottom">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-3 text-center mx-auto">
+            <form class="create-Burger mt-5">
+
+                <div class="form-group">
+                    <label for="burg">New Burger:</label>
+                    <input type="text" id="burg" name="name">
+                </div>
+                <button type="submit">Submit</button>
+
+            </form>
+        </div>
+
+
+        <div class="col">
+
+            <div class="card mb-3 bg-transparent mx-auto text-center">
+                <h4 class="text-center">devoured</h4>
+
+                <img src="/assets/burgerBunTop.png" class="card-img-top" alt=".burgerbuntop">
+                <div class="card-body">
+                    <span>
+                        {{#each burgers}}
+                        {{#if DEVOURED}}
+                        {{> burgers/burger-block devoured=false}}
+                        {{/if}}
+                        {{/each}}
+                    </span>
+                    <img src="/assets/burgerBunBottom.png" class="card-img-top" alt="burgerbunbottom">
+                </div>
+            </div>
+        </div>
+
+
     </div>
-    <button type="submit">Submit</button>
-</form>
-<p>Enter a burger you want to eat, click the submit button.</p>
+</div>
