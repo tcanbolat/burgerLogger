@@ -1,5 +1,5 @@
 body {
-    background-color: turquoise;
+    background-color: #DEEEE7;
 }
 
 .card {
@@ -15,5 +15,28 @@ p {
 
 i {
     color: Coral ;
+    font-size: 33px;
+    padding: 5px;
+}
+
+h1 {
+    font-family: 'Sigmar One', cursive;
+    font-size: 50px;
+    color: #693d3d;
+}
+
+h4 {
+    font-family: 'Sigmar One', cursive;
+    color: coral;
+    font-size: 30px;
+}
+
+.p-3 {
+    background-color: #f8de7e;
+}
+
+label {
+    color: coral;
+    font-family: 'Sigmar One', cursive;
     font-size: 30px;
 }

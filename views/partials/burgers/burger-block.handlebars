@@ -10,10 +10,10 @@
 
 
 {{!-- need to create delete route and then replace with this code --}}
-<p>
+<p class="shadow">
 	{{BURGER_NAME}}
 
-	<button class="devour" data-id="{{ID}}" data-newdevour="{{devoured}}">
-		{{#if devoured}}DEVOUR!{{else}}DELETE{{/if}}
+	<button class="devour btn btn-outline-warning" data-id="{{ID}}" data-newdevour="{{devoured}}">
+		{{#if devoured}}DEVOUR!{{else}}DIGEST{{/if}}
 	</button>
 </p>
