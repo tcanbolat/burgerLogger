@@ -1,7 +1,19 @@
 <li>
 	{{BURGER_NAME}}
-
-	<button class="devour" data-id="{{id}}" data-newsleep="{{devoured}}">
-		{{#if devoured}}DEVOUR!{{else}}WAKE UP!{{/if}}
+	{{#if devoured}}
+	<button class="devour" data-id="{{ID}}" data-newdevour="{{devoured}}">
+		DEVOUR!
 	</button>
+	{{/if}}
 </li>
+
+
+
+{{!-- need to create delete route and then replace with this code --}}
+{{!-- <li>
+	{{BURGER_NAME}}
+
+	<button class="devour" data-id="{{ID}}" data-newdevour="{{devoured}}">
+		{{#if devoured}}DEVOUR!{{else}}DELETE{{/if}}
+	</button>
+</li> --}}

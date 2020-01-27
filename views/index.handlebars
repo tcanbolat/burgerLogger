@@ -4,29 +4,31 @@
 
 
 <ul>
-  {{#each burgers}}
+    {{#each burgers}}
     {{#unless DEVOURED}}
-      {{> burgers/burger-block devoured=true}}
+    {{> burgers/burger-block devoured=true}}
     {{/unless}}
-  {{/each}}
+    {{/each}}
 </ul>
 
 <h2>devoured</h2>
 
 <ul>
-  {{#each burgers}}
+    {{#each burgers}}
     {{#if DEVOURED}}
-      {{> burgers/cat-block devoured=false}}
+    {{> burgers/burger-block devoured=false}}
     {{/if}}
-  {{/each}}
+    {{/each}}
 </ul>
 
 
 
-<form id="createplan" class="button-size">
-  <textarea type="text" name="newBurger"></textarea>
-  <button type="submit">Submit</button>
+<form class="create-Burger">
+
+    <div class="form-group">
+        <label for="burg">New Burger:</label>
+        <input type="text" id="burg" name="name">
+    </div>
+    <button type="submit">Submit</button>
 </form>
 <p>Enter a burger you want to eat, click the submit button.</p>
-
-{{burgers}}
