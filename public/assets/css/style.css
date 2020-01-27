@@ -1,5 +1,5 @@
 body {
-    background-color: aqua;
+    background-color: turquoise;
 }
 
 .card {
@@ -13,3 +13,7 @@ p {
     border-radius: 50em;
 }
 
+i {
+    color: Coral ;
+    font-size: 30px;
+}

@@ -37,6 +37,19 @@ const orm = {
 
       cb(result);
     });
+  },
+  deleteOne: function(table, condition, cb) {
+    var queryString = 
+      "DELETE FROM " + table + " WHERE " + condition;
+
+    console.log(queryString);
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
   }
 };
 

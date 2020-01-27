@@ -15,6 +15,11 @@ const burger = {
     orm.updateOne("burgers", booleanValue, condition, function(res) {
       cb(res);
     });
+  },
+  delete: function(condition, cb) {
+    orm.deleteOne("burgers", condition, function(res) {
+      cb(res);
+    });
   }
 };
 
