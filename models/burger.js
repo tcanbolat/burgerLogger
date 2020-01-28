@@ -7,9 +7,9 @@ const burger = {
     });
   },
   create: function(cols, vals, cb) {
-      orm.insertOne("burgers", cols, vals, function(res) {
-          cb(res);
-      });
+    orm.insertOne("burgers", cols, vals, function(res) {
+      cb(res);
+    });
   },
   update: function(booleanValue, condition, cb) {
     orm.updateOne("burgers", booleanValue, condition, function(res) {

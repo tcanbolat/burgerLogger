@@ -1,7 +1,6 @@
 // Import MySQL connection.
 var connection = require("../config/connection.js");
 
-
 const orm = {
   selectAll: function(tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
@@ -15,7 +14,6 @@ const orm = {
   insertOne: function(table, cols, vals, cb) {
     const queryString =
       "INSERT INTO " + table + " (" + cols + ") " + "VALUES (?) ";
-    console.log(queryString);
 
     connection.query(queryString, vals, function(err, result) {
       if (err) {
@@ -26,10 +24,8 @@ const orm = {
     });
   },
   updateOne: function(table, booleanValue, condition, cb) {
-    var queryString = 
-      "UPDATE " + table +" SET DEVOURED=" + booleanValue + " WHERE " + condition;
+    var queryString = "UPDATE " + table + " SET DEVOURED=" + booleanValue + " WHERE " + condition;
 
-    console.log(queryString);
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
@@ -39,10 +35,8 @@ const orm = {
     });
   },
   deleteOne: function(table, condition, cb) {
-    var queryString = 
-      "DELETE FROM " + table + " WHERE " + condition;
+    var queryString = "DELETE FROM " + table + " WHERE " + condition;
 
-    console.log(queryString);
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;

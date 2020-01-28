@@ -1,4 +1,3 @@
-console.log("burgerjs file loaded");
 $(function() {
   $(".devour").on("click", function(event) {
     var id = $(this).data("id");
@@ -6,29 +5,25 @@ $(function() {
     var devourState = {
       DEVOURED: newDevour
     };
-    console.log($(this)[0].innerText);
-    if($(this)[0].innerText === "DEVOUR!") {
-      
-    // Send the PUT request.
-    $.ajax("/api/burgers/" + id, {
-      type: "PUT",
-      data: devourState
-    }).then(function() {
-      console.log("changed state to", newDevour);
-      // Reload the page to get the updated list
-      location.reload();
-    });
-
-    }
-    else {
+    if ($(this)[0].innerText === "DEVOUR!") {
+      // Send the PUT request.
       $.ajax("/api/burgers/" + id, {
-        type: "DELETE",
+        type: "PUT",
+        data: devourState
+      }).then(function() {
+        // Reload the page to get the updated list
+        location.reload();
+      });
+    } else {
+      $.ajax("/api/burgers/" + id, {
+        type: "DELETE"
       }).then(function() {
         location.reload();
-      })
-      $(this).parent().remove();
+      });
+      $(this)
+        .parent()
+        .remove();
     }
-    
   });
 
   $(".create-Burger").on("submit", function(event) {
@@ -46,7 +41,6 @@ $(function() {
       type: "POST",
       data: newBurger
     }).then(function() {
-      console.log("created new burger!");
       // Reload the page to get the updated list
       location.reload();
     });

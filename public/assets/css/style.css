@@ -1,42 +1,42 @@
 body {
-    background-color: #DEEEE7;
+  background-color: #deeee7;
 }
 
 .card {
-    border: none;
+  border: none;
 }
 
 p {
-    border: 1px solid #693d3d;
-    background-color: #693d3d;
-    color: whitesmoke;
-    border-radius: 50em;
+  border: 1px solid #693d3d;
+  background-color: #693d3d;
+  color: whitesmoke;
+  border-radius: 50em;
 }
 
 i {
-    color: Coral ;
-    font-size: 33px;
-    padding: 5px;
+  color: Coral;
+  font-size: 33px;
+  padding: 5px;
 }
 
 h1 {
-    font-family: 'Sigmar One', cursive;
-    font-size: 50px;
-    color: #693d3d;
+  font-family: "Sigmar One", cursive;
+  font-size: 50px;
+  color: #693d3d;
 }
 
 h4 {
-    font-family: 'Sigmar One', cursive;
-    color: coral;
-    font-size: 30px;
+  font-family: "Sigmar One", cursive;
+  color: coral;
+  font-size: 30px;
 }
 
 .p-3 {
-    background-color: #f8de7e;
+  background-color: #f8de7e;
 }
 
 label {
-    color: coral;
-    font-family: 'Sigmar One', cursive;
-    font-size: 30px;
+  color: coral;
+  font-family: "Sigmar One", cursive;
+  font-size: 30px;
 }

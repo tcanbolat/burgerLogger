@@ -8,7 +8,6 @@ router.get("/", function(req, res) {
     var hbsObject = {
       burgers: data
     };
-    console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
@@ -21,8 +20,6 @@ router.post("/api/burgers", function(req, res) {
 
 router.put("/api/burgers/:id", function(req, res) {
   var condition = "ID = " + req.params.id;
-
-  console.log("condition", condition);
 
   burger.update(req.body.DEVOURED, condition, function(result) {
     if (result.changedRows === 0) {
@@ -39,10 +36,7 @@ router.delete("/api/burgers/:id", function(req, res) {
   burger.delete(condition, function(result) {
     res.status(200).end();
   });
-})
-
-
-
+});
 
 // Export routes for server.js to use.
 module.exports = router;
